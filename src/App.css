@@ -1,38 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
 .App {
-  text-align: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: yellow;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App__container {
+    width: 500px;
+    background: white;
+    padding: 2rem;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0px 4px 8px rgba(0,0, 0, 0.6);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.emoji {
+    font-size: 120px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App__container-stars {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.star {
+    font-size: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flip {
+	-webkit-animation: flip 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: flip 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
+
+@-webkit-keyframes flip {
+    0% {
+        -webkit-transform: translateX(0) translateZ(0) rotateY(0);
+                transform: translateX(0) translateZ(0) rotateY(0);
+        -webkit-transform-origin: 100% 50%;
+                transform-origin: 100% 50%;
+    }
+    100% {
+        -webkit-transform: translateX(100%) translateZ(160px) rotateY(-180deg);
+                transform: translateX(100%) translateZ(160px) rotateY(-180deg);
+        -webkit-transform-origin: 0% 50%;
+                transform-origin: 0% 50%;
+    }
+}
+@keyframes flip {
+    0% {
+        -webkit-transform: translateX(0) translateZ(0) rotateY(0);
+                transform: translateX(0) translateZ(0) rotateY(0);
+        -webkit-transform-origin: 100% 50%;
+                transform-origin: 100% 50%;
+    }
+    100% {
+        -webkit-transform: translateX(100%) translateZ(160px) rotateY(-180deg);
+                transform: translateX(100%) translateZ(160px) rotateY(-180deg);
+        -webkit-transform-origin: 0% 50%;
+                transform-origin: 0% 50%;
+    }
+}
+   
+/****************MEDIA QUERIES*********************/
+
+@media screen and (max-width: 550px) {
+    .App__container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .emoji {
+        font-size: 100px;
+    }
+    .star {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .emoji {
+        font-size: 80px;
+    }
+    .star {
+        font-size: 30px;
+    }
+}
+
