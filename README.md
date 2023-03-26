@@ -5,7 +5,7 @@ This is a simple but Funny Emoji Rating App built in React. A User can give rati
 
 ## Screenshots
 
-![EmojiRatingApp](https://user-images.githubusercontent.com/99909331/227736726-9b6a3afc-b3a4-4cba-b089-a25e6aac4a7d.PNG)
+![EmojiRatingApp](https://user-images.githubusercontent.com/99909331/227767015-f23cb207-563a-49a6-82de-56d5a1015ffb.PNG)
 
 ## Things/Concepts Implemented:
 - Functional Component
